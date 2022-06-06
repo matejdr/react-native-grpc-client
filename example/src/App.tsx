@@ -1,31 +1,90 @@
-import * as React from 'react';
+import React from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Echo from './Echo';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-grpc-client';
+const Section: React.FC<{
+  title: string;
+}> = ({ children, title }) => {
+  const isDarkMode = useColorScheme() === 'dark';
+  return (
+    <View style={styles.sectionContainer}>
+      <Text
+        style={[
+          styles.sectionTitle,
+          {
+            color: isDarkMode ? Colors.white : Colors.black,
+          },
+        ]}
+      >
+        {title}
+      </Text>
+      <Text
+        style={[
+          styles.sectionDescription,
+          {
+            color: isDarkMode ? Colors.light : Colors.dark,
+          },
+        ]}
+      >
+        {children}
+      </Text>
+    </View>
+  );
+};
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const isDarkMode = useColorScheme() === 'dark';
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={backgroundStyle}
+      >
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}
+        >
+          <Section title="grpc-web demo">
+            React Native @improbable-eng/grpc-web demo app
+          </Section>
+        </View>
+        <Echo />
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+  },
+  highlight: {
+    fontWeight: '700',
   },
 });

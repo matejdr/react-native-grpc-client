@@ -1,7 +1,7 @@
 {
-  "name": "react-native-grpc-client",
+  "name": "@matejdr/react-native-grpc-client",
   "version": "0.1.0",
-  "description": "gRPC client for React Native. A bridge to use the native gRPC in React Native apps.",
+  "description": "A gRPC client for React Native, which uses the native gRPC bridge.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -36,15 +36,20 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/matejdr/react-native-grpc-client/react-native-grpc-client",
-  "author": "Matej Drobnic <matej.dr@gmail.com> (https://github.com/matejdr/react-native-grpc-client)",
+  "repository": "https://github.com/matejdr/react-native-grpc-client",
+  "author": "Matej Drobnic <matej.dr@gmail.com> (https://github.com/matejdr)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matejdr/react-native-grpc-client/react-native-grpc-client/issues"
+    "url": "https://github.com/matejdr/react-native-grpc-client/issues"
   },
-  "homepage": "https://github.com/matejdr/react-native-grpc-client/react-native-grpc-client#readme",
+  "homepage": "https://github.com/matejdr/react-native-grpc-client#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "eventemitter3": "^4.0.7",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
@@ -65,7 +70,8 @@
     "react-native": "0.63.4",
     "react-native-builder-bob": "^0.18.0",
     "release-it": "^14.2.2",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "ts-protoc-gen": "^0.12.0"
   },
   "peerDependencies": {
     "react": "*",

@@ -1,0 +1,19 @@
+version: '2.1'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+    ports:
+      - '9010:9010'
+  envoy:
+    build:
+      context: ./
+      dockerfile: envoy.Dockerfile
+    image: grpcweb/envoy
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    links:
+      - server

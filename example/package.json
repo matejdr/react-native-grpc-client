@@ -1,6 +1,6 @@
 {
   "name": "react-native-grpc-client-example",
-  "description": "Example app for react-native-grpc-client",
+  "description": "Example app for @matejdr/react-native-grpc-client",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "google-protobuf": "3.11.4",
     "react": "16.13.1",
     "react-native": "0.63.4"
   },

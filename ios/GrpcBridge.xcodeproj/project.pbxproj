@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 
-		5E555C0D2413F4C50049A1A2 /* GrpcClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* GrpcClient.m */; };
+		5E555C0D2413F4C50049A1A2 /* GrpcBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* GrpcBridge.m */; };
 
 /* End PBXBuildFile section */
 
@@ -25,10 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libGrpcClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGrpcClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		134814201AA4EA6300B7C361 /* libGrpcBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGrpcBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
 
-		B3E7B5881CC2AC0600A0062D /* GrpcClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrpcClient.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* GrpcClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrpcClient.m; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* GrpcBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrpcBridge.h; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* GrpcBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrpcBridge.m; sourceTree = "<group>"; };
 
 /* End PBXFileReference section */
 
@@ -46,7 +46,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libGrpcClient.a */,
+				134814201AA4EA6300B7C361 /* libGrpcBridge.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,8 +55,8 @@
 			isa = PBXGroup;
 			children = (
 
-				B3E7B5881CC2AC0600A0062D /* GrpcClient.h */,
-				B3E7B5891CC2AC0600A0062D /* GrpcClient.m */,
+				B3E7B5881CC2AC0600A0062D /* GrpcBridge.h */,
+				B3E7B5891CC2AC0600A0062D /* GrpcBridge.m */,
 
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
@@ -65,9 +65,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* GrpcClient */ = {
+		58B511DA1A9E6C8500147676 /* GrpcBridge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "GrpcClient" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "GrpcBridge" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = GrpcClient;
+			name = GrpcBridge;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libGrpcClient.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libGrpcBridge.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "GrpcClient" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "GrpcBridge" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* GrpcClient */,
+				58B511DA1A9E6C8500147676 /* GrpcBridge */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 
-				B3E7B58A1CC2AC0600A0062D /* GrpcClient.m in Sources */,
+				B3E7B58A1CC2AC0600A0062D /* GrpcBridge.m in Sources */,
 
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +232,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = GrpcClient;
+				PRODUCT_NAME = GrpcBridge;
 				SKIP_INSTALL = YES;
 
 			};
@@ -249,7 +249,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = GrpcClient;
+				PRODUCT_NAME = GrpcBridge;
 				SKIP_INSTALL = YES;
 
 			};
@@ -258,7 +258,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "GrpcClient" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "GrpcBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -267,7 +267,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "GrpcClient" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "GrpcBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,

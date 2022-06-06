@@ -53,7 +53,7 @@ yarn test
 
 To edit the Objective-C files, open `example/ios/GrpcClientExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-grpc-client`.
 
-To edit the Kotlin files, open `example/android` in Android studio and find the source files at `reactnativegrpcclient` under `Android`.
+To edit the Kotlin files, open `example/android` in Android studio and find the source files at `matejdr.grpc` under `Android`.
 
 ### Commit message convention
 
