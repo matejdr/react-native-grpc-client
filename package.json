@@ -49,8 +49,7 @@
   },
   "dependencies": {
     "abort-controller": "^3.0.0",
-    "eventemitter3": "^4.0.7",
-    "url": "^0.11.0"
+    "eventemitter3": "^4.0.7"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
