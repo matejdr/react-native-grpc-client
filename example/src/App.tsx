@@ -61,7 +61,7 @@ export default function App() {
           }}
         >
           <Section title="grpc-web demo">
-            React Native @improbable-eng/grpc-web demo app
+            React Native gRPC demo app
           </Section>
         </View>
         <Echo />

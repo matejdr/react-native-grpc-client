@@ -19,6 +19,8 @@ export class GrpcCall implements PromiseLike<CompletedGrpcCall> {
 
   #abort: AbortController;
 
+  private isFinished = false;
+
   constructor(
     method: string,
     requestHeaders: GrpcMetadata,
@@ -61,8 +63,11 @@ export class GrpcCall implements PromiseLike<CompletedGrpcCall> {
     return this.onSendMessage(data);
   }
 
-  finishSendMessage(): Promise<void> {
-    return this.onFinishSendMessage();
+  finishSendMessage(): Promise<void> | void {
+    if (!this.isFinished) {
+      this.isFinished = true;
+      return this.onFinishSendMessage();
+    }
   }
 
   cancel() {
